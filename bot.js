@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /^\odb/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
-      botRegexGo = /^\/gogo/; botRegexSP = /^\/move along/;
+      botRegexGo = /^\/gogo/; botRegexSP = /^\/move along/; botRegexMozi = /^\/mozi/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -97,6 +97,12 @@ this.res.writeHead(200);
 postMessage("http://static.fjcdn.com/pictures/Southpark_5db603_184365.jpg");
 this.res.end();
 }
+else if(request.text && botDuck.test(request.text)) {
+this.res.writeHead(200);
+postMessage("http://usatthebiglead.files.wordpress.com/2012/11/rivers-int-11-18-12.gif?w=1000");
+this.res.end();
+}
+
 
   else {
     console.log("don't care");

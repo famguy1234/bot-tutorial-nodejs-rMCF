@@ -89,7 +89,7 @@ function respond() {
   }
   else if(request.text && botRegexGo.test(request.text)) {
 this.res.writeHead(200);
-postMessage("http://media-touchdown.cursecdn.com/attachments/7/135/635462883973666537.jpg");
+postMessage("http://www.roflsaurus.com/users/danrival/FOUR%20VERTICALS.jpg");
 this.res.end();
 }
 else if(request.text && botRegexSP.test(request.text)) {

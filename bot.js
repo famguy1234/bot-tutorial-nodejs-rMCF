@@ -97,7 +97,7 @@ this.res.writeHead(200);
 postMessage("http://static.fjcdn.com/pictures/Southpark_5db603_184365.jpg");
 this.res.end();
 }
-else if(request.text && botDuck.test(request.text)) {
+else if(request.text && botRegexMozi.test(request.text)) {
 this.res.writeHead(200);
 postMessage("http://usatthebiglead.files.wordpress.com/2012/11/rivers-int-11-18-12.gif?w=1000");
 this.res.end();

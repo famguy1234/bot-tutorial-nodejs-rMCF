@@ -99,7 +99,7 @@ this.res.end();
 }
 else if(request.text && botRegexMozi.test(request.text)) {
 this.res.writeHead(200);
-postMessage("http://usatthebiglead.files.wordpress.com/2012/11/rivers-int-11-18-12.gif?w=1000");
+postMessage("http://assets.sbnation.com/assets/1725937/rivers_INT.gif");
 this.res.end();
 }
 

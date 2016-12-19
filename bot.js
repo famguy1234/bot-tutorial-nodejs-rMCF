@@ -105,7 +105,7 @@ this.res.end();
 
 else if(request.text && botRules.test(request.text)) {
 this.res.writeHead(200);
-postMessage("http://daddyleagues.com/OurFootballLeag/rules");
+postMessage("https://i.groupme.com/720x1280.png.a2403dde77924d13a8e4d421d18ebdff https://i.groupme.com/720x1280.png.3b67031c658041bc81042f6262578bd4");
 this.res.end();
 }
 

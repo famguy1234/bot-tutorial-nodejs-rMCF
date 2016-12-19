@@ -45,14 +45,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/OurFootballLeag/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/ofl/schedules"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/OurFootballLeag/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/ofl/players?name=%22+rep+%22&position=all&team=all");
     this.res.end();
   }  
 

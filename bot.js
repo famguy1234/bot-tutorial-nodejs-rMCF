@@ -9,7 +9,7 @@ function respond() {
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /^\odb/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexGo = /^\/gogo/; botRegexSP = /^\/move along/; botRegexMozi = /^\/mozi/; botRegexRules = /^\/rules/; botPSK = /^\/pskilr/;
-      botRegexRNS = /^\/rns/; botRegexDDL = /^\/home/;
+      botRegexRNS = /^\/rns/; botRegexDDL = /^\/home/; botRegexBlog = /^\/blog/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -127,6 +127,11 @@ postMessage("http://daddyleagues.com/ofl");
 this.res.end();
 }  
   
+  else if(request.text && botRegexBlog.test(request.text)) {
+this.res.writeHead(200);
+postMessage("http://daddyleagues.com/ofl/blog");
+this.res.end();
+}  
   
   else {
     console.log("don't care");

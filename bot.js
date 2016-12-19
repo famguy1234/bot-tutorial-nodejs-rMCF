@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /^\odb/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
-      botRegexGo = /^\/gogo/; botRegexSP = /^\/move along/; botRegexMozi = /^\/mozi/; botRules = /^\/rules/; botPSK = /^\/pskilr/;
+      botRegexGo = /^\/gogo/; botRegexSP = /^\/move along/; botRegexMozi = /^\/mozi/; botRegexRules = /^\/rules/; botPSK = /^\/pskilr/;
       botRegexRNS = /^\/rns/; botRegexDDL = /^\/home/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -103,7 +103,7 @@ postMessage("http://assets.sbnation.com/assets/1725937/rivers_INT.gif");
 this.res.end();
 }
 
-else if(request.text && botRules.test(request.text)) {
+else if(request.text && botRegexRules.test(request.text)) {
 this.res.writeHead(200);
 postMessage("http://i.imgur.com/8YlSJQn.jpg http://i.imgur.com/zQrGMrS.jpg");
 this.res.end();

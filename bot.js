@@ -48,12 +48,11 @@ function respond() {
     postMessage("http://daddyleagues.com/ofl/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
-  else if(request.text && botRegexP.test(request.text)) {
+   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/ofl/players?name=%22+rep+%22&position=all&team=all");
-    this.res.end();
+    postMessage("http://daddyleagues.com/ofl/players?name="+rep+"&position=all&team=all");
   }  
 
   else if(request.text && botRegexTw.test(request.text)) {
